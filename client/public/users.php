@@ -51,9 +51,20 @@
                         <h4 class="fleft">List of users</h4>
 					    <br>
 
+
+                        <?php
+						if ($_SESSION['user_type']=="admin"){
+
+						?>
 						<button class="fright addNew" @click="showingAddModal = true;">
 							Add New
 						</button>
+						<?php
+						}
+						?>
+						
+						
+						
 						<div class="clear"></div>
 						<p class="errorMessage" v-if="errorMessage">
 							{{errorMessage}}
@@ -94,9 +105,18 @@
 								<p class="fleft">
 									Add New User
 								</p>
-								<button class="fright close" @click="showingAddModal = false;">
+								
+								 <?php
+						if ($_SESSION['user_type']=="admin"){
+
+						?>
+						<button class="fright close" @click="showingAddModal = false;">
 									x
 								</button>
+						<?php
+						}
+						?>
+								
 								<div class="clear"></div>
 							</div>
 							<div class="modalContent">
