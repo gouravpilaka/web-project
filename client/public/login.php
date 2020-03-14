@@ -35,8 +35,6 @@ else{
 		$out['message'] = "Login Failed. User not Found";
 	}
 }
-
-
 	
 $conn->close();
 

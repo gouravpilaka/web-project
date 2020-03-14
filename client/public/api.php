@@ -1,11 +1,9 @@
 <?php
 session_start();
 include ("connect.php");
-
 $res = array('error' => false);
 $user_id = $_SESSION['user'];
 $action = 'read';
-
 if(isset($_GET['action'])){
 	$action = $_GET['action'];
 }
