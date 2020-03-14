@@ -150,9 +150,9 @@ if($table == "exercise"){
 if($table == "routine"){
 	if($action == 'read'){
 		if($_SESSION['user_type'] == "admin"){
-			$result = $conn->query("SELECT r.id,r.name,r.user_id FROM `routine` r join user u on u.id = r.user_id");
+			$result = $conn->query("SELECT r.id,r.name,r.user_id,r.description,u.username FROM `routine` r join user u on u.id = r.user_id");
 		}else{
-			$result = $conn->query("SELECT r.id,r.name,r.user_id FROM `routine` r join user u on u.id = r.user_id where user_id = $user_id");
+			$result = $conn->query("SELECT r.id,r.name,r.user_id,r.description,u.username FROM `routine` r join user u on u.id = r.user_id where user_id = $user_id");
 		}
 		
 		$routine = array();

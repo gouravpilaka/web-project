@@ -102,7 +102,7 @@ var app = new Vue({
 			});
 		},
 
-		selectRoutine(routineExercise){
+		selectRoutineExercise (routineExercise){
 			//console.log(user);
 			app.clickedRoutineExercise = routineExercise;
 		},

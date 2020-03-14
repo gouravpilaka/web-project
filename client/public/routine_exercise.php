@@ -76,10 +76,10 @@
 								<td>{{routine_exercise.routine_name}}</td>
 								<td>{{routine_exercise.exercise_name}}</td>
 								<td>
-								<button @click="showingEditModal = true; selectRoutine(routine)">
+								<button @click="showingEditModal = true; selectRoutineExercise(routine_exercise)">
 									Edit
 								</button>
-								<button @click="showingDeleteModal = true; selectRoutine(routine)" class="btn-delete">
+								<button @click="showingDeleteModal = true; selectRoutineExercise(routine_exercise)" class="btn-delete">
 									Delete
 								</button></td>
 							</tr>
@@ -159,7 +159,7 @@
 										<th> : </th>
 										<td>
 										<select type="text" class="routines" name="" v-model="clickedRoutineExercise.routine"  v-for="routine in routines">
-											<option v-for="routine in routines" v-bind:value="routine.name">
+											<option v-for="routine in routines" v-bind:value="routine.id">
 										      {{ routine.name }}
 										    </option>
 												
@@ -172,7 +172,7 @@
 										<th> : </th>
 										<td>
 										<select type="text" class="exercises" name="" v-model="clickedRoutineExercise.exercise">
-											<option v-for="exercise in exercises" v-bind:value="exercise.name">
+											<option v-for="exercise in exercises" v-bind:value="exercise.id">
 										      {{ exercise.name }}
 										    </option>
 										</select>
@@ -206,7 +206,7 @@
 							</div>
 							<div class="modalContent">
 								<p>
-									You are going to delete '{{clickedRoutineExercise.name}}'.
+									You are going to delete '{{clickedRoutineExercise.routine}} {{clickedRoutineExercise.exercise}}'.
 								</p>
 								<br>
 								<br>
