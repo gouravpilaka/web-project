@@ -1,5 +1,5 @@
 <?php
-require_once('conn.php');
+require_once('connect.php');
  
 function get_exercise($conn , $term){ 
  $query = "SELECT * FROM exercise WHERE exercise_name LIKE '%".$term."%' ORDER BY exercise_name ASC";
