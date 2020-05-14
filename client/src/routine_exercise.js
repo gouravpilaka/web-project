@@ -1,5 +1,5 @@
 var app = new Vue({
-	el: "#root",
+	el: "#root"
 	data: {
 		showingAddModal: false,
 		showingEditModal: false,
